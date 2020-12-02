@@ -23,7 +23,7 @@ def partTwo():
         maxValueOfCharacters = int(line.split("-")[1].split(" ")[0]) - 1 #15 - 1
         targetCharacter = line.split("-")[1].split(" ")[1].split(":")[0] #q
         targetLine = line.split("-")[1].split(" ")[2].rstrip() #qqqqqqqqqqxq
-        if (targetLine[minValueOfCharacters] == targetCharacter and targetLine[maxValueOfCharacters] != targetCharacter) ^ (targetLine[maxValueOfCharacters] == targetCharacter and targetLine[minValueOfCharacters] != targetCharacter):
+        if (targetLine[minValueOfCharacters] == targetCharacter) ^ (targetLine[maxValueOfCharacters] == targetCharacter):
             count+=1 #Uses XOR operator ^ 
     f.close()
     return count
